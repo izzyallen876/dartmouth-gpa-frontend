@@ -44,7 +44,7 @@ function App() {
 
   const calculateGPA = async () => {
     try {
-      const response = await axios.post("dartmouth-gpa-frontend-kofqpw6xa-izzyallen876s-projects.vercel.app", { terms });
+      const response = await axios.post("https://dartmouth-gpa-api.onrender.com/calculate_gpa", { terms });
       setGpaData(response.data);
       setErrorMessage("");
     } catch (error) {
